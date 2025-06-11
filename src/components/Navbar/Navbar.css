@@ -1,0 +1,105 @@
+.navbar{
+    background-color: #121212;
+    color: #fff;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    font-size: 20px;
+    transition: 0.5s ease-in-out;
+    top: 0;
+    z-index: 2;
+}
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.underline{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height:2px; 
+    background-color: #faa95d;
+    border: 2px solid #faa95d;
+}
+.anchor-link{
+    text-decoration: none;
+    color:#fff;
+}
+.anchor-link:hover{
+    text-decoration: none;
+    color:#fff0e3;
+}
+.nav-menu li:hover{
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+.nav-connect{
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267.94deg, #DA7C25 .36%, #B923E1 100%);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.nav-connect:hover{
+    transform: scale(1.05);
+}
+.nav-mob-open{
+    display: none;
+}
+.nav-mob-close{
+    display: none;
+}
+
+@media(max-width:768px){
+    .navbar{
+        margin: 20px 50px;
+    }
+    .nav-connect{
+        display: none;
+    }
+    .nav-mob-open{
+        display: block;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        /* shadow */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .nav-mob-close{
+        position: relative;
+        display: block;
+        top: 30px;
+        left: 260px;
+        width: 30px;
+    }
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #303030bb;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s ease-in-out;
+        right: -350px;
+        /* blur background */
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    .nav-menu li{
+        font-size: 24px;
+        padding-left: 10px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
