@@ -1,28 +1,26 @@
 .contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 80px 170px;
-    gap: 80px;
-    margin-bottom: 50px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    max-width: 1100px;
+    gap: 2rem;
 }
 .contact-title h1{
-    padding: 0 30px;
-    font-size: 50px;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 .contact-section{
-    display: flex;
-    gap: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 .contact-left{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.2rem;
 }
 .contact-left h1{
-    font-size: 80px;
+    font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 800;
     background: linear-gradient(267.94deg, #DA7C25 .36%, #B923E1 100%);
     background-clip: text;
@@ -30,67 +28,59 @@
     -webkit-text-fill-color: transparent;
 }
 .contact-left p{
-    max-width: 500px;
-    font-size: 20px;
+    max-width: 900px;
+    font-size: 1rem;
     color: #d8d8d8;
-    line-height: 30px;
+    line-height: 1.6;
 }
 .contact-details{
     display: flex;
     flex-direction: column;
     color: #d8d8d8;
-    font-size:22;
-
+    gap: 0.75rem;
 }
 .contact-detail{
     display: flex;
     align-items: center;
-    gap: 20px;
-} 
+    gap: 12px;
+}
 .contact-right{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 20px;
+    gap: 1rem;
 }
 .contact-right label{
     color: #d8d8d8;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 500;
 }
-.contact-right input{
-    border: none;
-    width: 700px;
-    height: 70px;
-    padding-left: 20px;
-    border-radius: 4px;
-    background: #323232;
-    color: #a0a0a0;
-    font-family: Outfit;
-
-}
+.contact-right input,
 .contact-right textarea{
     border: none;
-    width: 700px;
-    height: 200px;
-    padding-left: 20px;
-    border-radius: 4px;
+    width: 100%;
+    min-height: 55px;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
     background: #323232;
     color: #a0a0a0;
     font-family: Outfit;
+}
+.contact-right textarea{
+    min-height: 180px;
+    resize: vertical;
 }
 .contact-submit{
     border: none;
     color: #fff;
     border-radius: 50px;
     background: linear-gradient(267.94deg, #DA7C25 .36%, #B923E1 100%);
-    padding: 20px 60px;
+    padding: 0.9rem 2rem;
     cursor: pointer;
-    transition: 0.5s;
-    margin-bottom: 50px;
+    transition: 0.3s;
+    align-self: flex-start;
+    margin-bottom: 1rem;
 }
 .contact-submit:hover{
     border: 2px solid #fff;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+    transform: scale(1.04);
 }
