@@ -1,55 +1,78 @@
 .about{
-    /* background: rgb(89, 216, 255); */
-    flex-direction: column;
-    margin: 40px 100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    max-width: 1100px;
 }
 .about-title h1{
-    padding: 0 30px;
-    font-size: 50px;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     font-weight: 600;
+    margin-bottom: 1.2rem;
 }
-/* .about-title img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-} */
 .about-sections{
-    gap: 50px;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.about-left img{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    object-fit: cover;
 }
 .about-right{
-    font-size: 18px;
+    flex: 1;
+    min-width: 280px;
+    font-size: 1rem;
+}
+.about-para p{
+    margin-bottom: 1rem;
 }
 .about-skills{
-    display: flex;
-    flex-direction: column; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.2rem;
 }
 .about-skill{
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
     align-items: center;
-    transition: 0.3s;
+    gap: 1rem;
+    background: rgba(255,255,255, 0.08);
+    border-radius: 14px;
+    padding: 0.75rem;
 }
 .about-skill p, .about-achievement p{
-    min-width: 150px;
+    margin: 0;
     font-size: 1rem;
     font-weight: 500;
 }
 .about-skill hr{
-    outline: none;
-    border: none;
-    width: 50%;
+    flex: 1;
+    margin: 0;
     height: 8px;
     border-radius: 50px;
     background: linear-gradient(264deg, #DA7C25 -5.09%, #B923E1 100%);
 }
-.about-skill:hover, .about-achievement:hover{
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
 .about-achievements{
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: space-around;
+    gap: 0.5rem;
+}
+.about-achievementx p{
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+}
+@media(max-width: 768px){
+    .about{
+        margin: 2rem auto;
+    }
+    .about-sections{
+        flex-direction: column;
+    }
+    .about-right{
+        width: 100%;
+    }
 }

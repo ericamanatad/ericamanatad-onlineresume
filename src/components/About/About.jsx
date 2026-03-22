@@ -4,7 +4,7 @@ import kai_pic from '../../assets/kai-pic.jpg'
 
 const About = () => {
   return (
-    <div id='about' className='about d-flex justify-content-between align-items-center p-3'>
+    <div id='about' className='about d-grid justify-content-between align-items-center p-3'>
         <div className="about-title position-relative">
             <h1>About Me</h1>
             {/* <img src={kai_pic} alt="kai_pic" /> */}
@@ -29,7 +29,7 @@ const About = () => {
                     <div className="about-achievementx"><p style={{'font-size': '1.5rem'}}><b>ACHIEVEMENTS AND EXTRA CURRICULAR</b></p></div>
                     <div className="about-achievement"><p>Research Congress 2025 - 2nd Best Thesis</p></div>
                     <div className="about-achievement"><p>Another Achievement</p></div>
-                    <div className="about-achievement"><p>Magnum</p></div>
+                    <div className="about-achievement"><p>Cum Laude</p></div>
                 </div>
             </div>
         </div>
